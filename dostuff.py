@@ -1,7 +1,12 @@
-import mechanize
+import selenium
+from selenium import webdriver
 
-br = mechanize.Browser()
-br.set_handle_robots(False)
-br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
-br.open('http://www.onecountry.com/giveaways/give-million-cash-entry/')
-print(br.title)
+driver = webdriver.Firefox()
+driver.get("https://www.onecountry.com/giveaways/give-million-cash-entry/")
+assert 'Country' in driver.title
+elemNameOne = driver.find_element_by_name('first_name')
+elemNameOne.clear()
+elemNameOne.send_keys('James')
+elemNameOne.send_keys(Keys.RETURN)
+
+
