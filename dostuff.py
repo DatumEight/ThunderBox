@@ -4,7 +4,7 @@ import geckodriver_autoinstaller
 from selenium.webdriver.common.keys import Keys
 geckodriver_autoinstaller.install()
 
-driver = webdriver.Chrome()
+driver = webdriver.Firefox()
 driver.get("https://www.onecountry.com/giveaways/give-million-cash-entry/")
 assert 'Country' in driver.title
 elemNameOne = driver.find_element_by_name('first_name')
