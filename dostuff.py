@@ -1,5 +1,5 @@
 import selenium
-from selenium import webdriver
+from selenium import Webdriver
 import geckodriver_autoinstaller
 from selenium.webdriver.common.keys import Keys
 geckodriver_autoinstaller.install()
